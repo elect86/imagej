@@ -13,12 +13,12 @@ dependencies {
     implementation(bonej.utilities)
     implementation(fiji.trakem2Transform)
     implementation(groovy.yaml)
-//    implementation(imagej.core)
+    implementation(imagej.core)
 //    implementation(libs.hsqldb)
 //    implementation(ima)
 }
 
-object imagej {
+object Imagej {
     val repo = "https://github.com/imagej/imagej"
     val projects = arrayOf("")
 }
@@ -52,9 +52,9 @@ class Git {
 tasks {
     val cleanAndClone by registering {
         doLast {
-            for (project in imagej.projects) {
+            for (project in Imagej.projects) {
                 clean()
-                git.clone("${imagej.repo}$project.git")
+                git.clone("${Imagej.repo}$project.git")
             }
         }
     }
@@ -62,7 +62,7 @@ tasks {
 
 fun clean() {
     file("core").listFiles()?.forEach {
-        if (it.name != "build.gradle.kts" && it.name != "settings.gradle.kts" && it.name != ".gradle")
+        if (!it.name.endsWith(".gradle.kts") && it.name != "gradle" && it.name != ".gradle")
             it.deleteRecursively()
     }
 }
