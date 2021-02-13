@@ -9,7 +9,13 @@ repositories {
 
 dependencies {
     //    implementation(project(":core"))
-    implementation("net.imagej:imagej:2.2.0")
+    implementation(batik.xmlgraphicsCommons)
+    implementation(bonej.utilities)
+    implementation(fiji.trakem2Transform)
+    implementation(groovy.yaml)
+//    implementation(imagej.core)
+//    implementation(libs.hsqldb)
+//    implementation(ima)
 }
 
 object imagej {
@@ -28,7 +34,6 @@ class Git {
             workingDir = dst
             commandLine("git", "init")
         }
-        println(url)
         rootProject.exec {
             workingDir = dst
             commandLine("git", "remote", "add", "origin", url)
@@ -57,7 +62,7 @@ tasks {
 
 fun clean() {
     file("core").listFiles()?.forEach {
-        if (it.name != "build.gradle.kts" && it.name != ".gradle")
+        if (it.name != "build.gradle.kts" && it.name != "settings.gradle.kts" && it.name != ".gradle")
             it.deleteRecursively()
     }
 }
