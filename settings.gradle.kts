@@ -13,6 +13,7 @@ rootProject.name = "imagej"
 
 
 includeBuild("core")
+includeBuild("common")
 
 //dependencyResolutionManagement {
 //    repositories {
