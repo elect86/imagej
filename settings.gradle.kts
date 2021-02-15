@@ -30,22 +30,22 @@ includeBuild("common")
 //
 
 
-dependencyResolutionManagement {
-    versionCatalogs {
-        //        create("libs") {
-        //            from(files("gradle/dependencies.toml"))
-        //        }
-        create("batik") { from(files("gradle/batik.toml")) }
-        create("bonej") { from(files("gradle/bonej.toml")) }
-        create("fiji") { from(files("gradle/fiji.toml")) }
-        create("groovy") { from(files("gradle/groovy.toml")) }
-        create("imagej") { from(files("gradle/imagej.toml")) }
-        //        File("$rootDir/gradle").listFiles()?.map {
-        //        if (it.name != "wrapper")
-        //            create(it.nameWithoutExtension) {
-        //                from(files("gradle/${it.name}"))
-        //            }
-        //       }
-    }
-}
+//dependencyResolutionManagement {
+//    versionCatalogs {
+//        //        create("libs") {
+//        //            from(files("gradle/dependencies.toml"))
+//        //        }
+//        create("batik") { from(files("gradle/batik.toml")) }
+//        create("bonej") { from(files("gradle/bonej.toml")) }
+//        create("fiji") { from(files("gradle/fiji.toml")) }
+//        create("groovy") { from(files("gradle/groovy.toml")) }
+//        create("imagej") { from(files("gradle/imagej.toml")) }
+//        //        File("$rootDir/gradle").listFiles()?.map {
+//        //        if (it.name != "wrapper")
+//        //            create(it.nameWithoutExtension) {
+//        //                from(files("gradle/${it.name}"))
+//        //            }
+//        //       }
+//    }
+//}
 

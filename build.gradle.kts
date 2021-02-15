@@ -9,11 +9,11 @@ repositories {
 
 dependencies {
     //    implementation(project(":core"))
-    implementation(batik.xmlgraphicsCommons)
-    implementation(bonej.utilities)
-    implementation(fiji.trakem2Transform)
-    implementation(groovy.yaml)
-    implementation(imagej.core)
+//    implementation(batik.xmlgraphicsCommons)
+//    implementation(bonej.utilities)
+//    implementation(fiji.trakem2Transform)
+//    implementation(groovy.yaml)
+//    implementation(imagej.core)
     //    implementation(libs.hsqldb)
     //    implementation(ima)
 }

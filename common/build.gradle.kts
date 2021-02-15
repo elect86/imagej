@@ -7,10 +7,13 @@ repositories {
 }
 
 dependencies {
-    implementation("net.imglib2:imglib2:5.10.0")
-    implementation("net.imglib2:imglib2-roi:0.10.2")
-    implementation("org.scijava:scijava-common:2.83.3")
-    implementation("org.scijava:scijava-table:0.6.1")
+    implementation(imgLib2.core)
+    implementation(imgLib2.roi)
+    implementation(sciJava.common)
+    implementation(sciJava.table)
     implementation("edu.ucar:udunits:4.3.18")
     testImplementation("junit:junit:4.13")
 }
+
+group = "sciJava"
+version = "0.0.2"
